@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="منصة تفاعلية لليوم العالمي للطفل – المدرسة الثانية بالعريجاء لرياض الأطفال – إعداد المعلمة منال طلال العصيمي">
+<link rel="icon" type="image/png" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="سماء حقوقي | اليوم العالمي للطفل">
+<meta property="og:description" content="اكتشف حقوقك، العب، غنِّ، وأطلق بالونك! – المدرسة الثانية بالعريجاء لرياض الأطفال">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/children-day/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/children-day/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://YOUR-USERNAME.github.io/children-day/preview.jpg">
+<title>سماء حقوقي | اليوم العالمي للطفل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#e6f6ff; --sky2:#fff5fb; --grass:#8fd694; --grass2:#5fbf6a;
+  --pink:#ec4f9a; --purple:#7b4fd6; --teal:#14a6b8; --orange:#f59a2c; --blue:#2f7fd1;
+  --ink:#2b2a4a; --muted:#6b6a86; --card:#ffffff; --line:#ece7f6;
+  --r:22px; --shadow:0 10px 30px -12px rgba(76,52,140,.28);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Tajawal',sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--sky) 0%,var(--sky2) 60%,#f3fbef 100%);min-height:100vh;overflow-x:hidden;line-height:1.7}
+h1,h2,h3,.disp{font-family:'Baloo Bhaijaan 2','Tajawal',sans-serif;line-height:1.3;margin:0}
+button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.hlogo{height:52px;width:auto;flex:none;display:block}
+.flogo{background:#fff;border-radius:22px;padding:10px 14px;box-shadow:0 12px 24px -12px rgba(0,0,0,.4);flex:none}
+.flogo img{height:86px;width:auto;display:block}
+footer .frow{display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:right}
+footer .ftx{flex:1;text-align:center}
+@media(max-width:640px){footer .frow{flex-direction:column}footer .flogo:last-child{display:none}}
+.brand .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--pink),var(--purple));display:grid;place-items:center;font-size:24px;flex:none;box-shadow:var(--shadow)}
+.brand b{display:block;font-family:'Baloo Bhaijaan 2';font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand small{display:block;color:var(--muted);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.links{display:flex;gap:6px;flex:none}
+nav.links a{text-decoration:none;color:var(--ink);font-weight:700;font-size:14px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+nav.links a.cta{background:var(--pink);color:#fff;border-color:var(--pink)}
+@media(max-width:720px){nav.links a:not(.cta){display:none}}
+
+/* hero */
+.hero{position:relative;padding:46px 0 120px;text-align:center;overflow:hidden}
+.cloud{position:absolute;opacity:.9;animation:drift 38s linear infinite}
+@keyframes drift{from{transform:translateX(-40vw)}to{transform:translateX(140vw)}}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:700;color:var(--purple);font-size:14px;box-shadow:var(--shadow)}
+.hero h1{font-size:clamp(34px,6.4vw,64px);margin:18px 0 8px;font-weight:800}
+.hero h1 .c1{color:var(--pink)} .hero h1 .c2{color:var(--purple)} .hero h1 .c3{color:var(--teal)}
+.hero p.lead{max-width:640px;margin:0 auto;color:var(--muted);font-size:18px}
+.datebox{margin:26px auto 0;display:inline-grid;grid-template-columns:auto auto;gap:0;background:#fff;border-radius:26px;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line);text-align:right}
+.datebox .cal{background:linear-gradient(160deg,var(--orange),var(--pink));color:#fff;padding:14px 22px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.datebox .cal .d{font-family:'Baloo Bhaijaan 2';font-size:46px;font-weight:800;line-height:1}
+.datebox .cal .m{font-weight:800;font-size:16px}
+.datebox .info{padding:14px 22px;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.datebox .info b{font-family:'Baloo Bhaijaan 2';font-size:19px}
+.datebox .info span{color:var(--muted);font-size:14.5px}
+.countdown{margin-top:6px;font-weight:800;color:var(--teal);font-size:16px}
+.hero .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btn{border:0;cursor:pointer;border-radius:999px;padding:13px 24px;font-weight:800;font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .15s}
+.btn:active{transform:scale(.96)}
+.btn.primary{background:var(--pink);color:#fff;box-shadow:0 10px 20px -8px rgba(236,79,154,.7)}
+.btn.ghost{background:#fff;color:var(--purple);border:2px solid #e3d9fb}
+.hills{position:absolute;bottom:-2px;left:0;width:100%;height:120px}
+.kids{font-size:clamp(38px,6vw,54px);margin-top:24px;letter-spacing:6px}
+.kids span{display:inline-block;animation:bob 2.6s ease-in-out infinite}
+.kids span:nth-child(2){animation-delay:.3s}.kids span:nth-child(3){animation-delay:.6s}.kids span:nth-child(4){animation-delay:.9s}.kids span:nth-child(5){animation-delay:1.2s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* credits strip */
+.credits{background:#fff;margin-top:-1px}
+.credits .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;padding-top:22px;padding-bottom:22px}
+.cred{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:18px;background:#faf8ff;border:1px solid var(--line)}
+.cred .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:24px;flex:none}
+.cred small{display:block;color:var(--muted);font-size:13px}
+.cred b{font-family:'Baloo Bhaijaan 2';font-size:17px}
+
+/* sections */
+section.sec{padding:64px 0}
+.sec-head{text-align:center;margin-bottom:30px}
+.tag{display:inline-block;color:#fff;border-radius:999px;padding:6px 18px;font-weight:800;font-size:15px;margin-bottom:12px}
+.sec-head h2{font-size:clamp(28px,4.4vw,42px)}
+.sec-head p{color:var(--muted);margin:8px auto 0;max-width:620px;font-size:17px}
+
+/* rights */
+.rights{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.right{perspective:900px;height:210px;cursor:pointer;border:0;background:none;padding:0;text-align:center}
+.right .in{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.3,1.4,.5,1);transform-style:preserve-3d}
+.right.flip .in{transform:rotateY(180deg)}
+.right .f,.right .b{position:absolute;inset:0;border-radius:var(--r);backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;box-shadow:var(--shadow)}
+.right .f{background:#fff;border:3px solid var(--c)}
+.right .f .em{font-size:58px;line-height:1;margin-bottom:10px;transition:transform .2s}
+.right:hover .f .em{transform:scale(1.12) rotate(-6deg)}
+.right .f h3{font-size:20px;color:var(--c)}
+.right .f small{color:var(--muted);font-size:13px;margin-top:4px}
+.right .b{background:var(--c);color:#fff;transform:rotateY(180deg);font-weight:700;font-size:16px;gap:8px}
+.right .b .say{background:rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:13px}
+
+/* games */
+.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px}
+.game{background:#fff;border-radius:26px;padding:22px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.game h3{font-size:22px;display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.game .hint{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+.q{font-weight:800;font-size:18px;background:#f6f2ff;border-radius:16px;padding:14px;text-align:center;min-height:70px;display:grid;place-items:center}
+.opts{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.opt{border:2px solid var(--line);background:#fff;border-radius:16px;padding:10px 18px;font-weight:800;cursor:pointer;font-size:17px;transition:transform .12s}
+.opt:hover{transform:translateY(-2px)}
+.opt.ok{background:#e7f8ea;border-color:var(--grass2);color:#1f7a2c}
+.opt.no{background:#ffe9ee;border-color:#ff8aa5;color:#b4234a}
+.fb{text-align:center;font-weight:800;min-height:30px;margin-top:10px}
+.prog{display:flex;justify-content:space-between;align-items:center;margin-top:8px;color:var(--muted);font-size:14px}
+.score{font-weight:800;color:var(--purple)}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.match .col{display:flex;flex-direction:column;gap:8px}
+.mi{border:2px solid var(--line);background:#fff;border-radius:14px;padding:10px;font-weight:800;cursor:pointer;font-size:15px;display:flex;align-items:center;gap:8px;justify-content:center;min-height:52px}
+.mi .e{font-size:26px}
+.mi.sel{border-color:var(--purple);background:#f3edff}
+.mi.done{border-color:var(--grass2);background:#e7f8ea;cursor:default;opacity:.8}
+.mi.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.reset{border:0;background:none;color:var(--teal);font-weight:800;cursor:pointer;text-decoration:underline}
+
+/* participate */
+.join{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}
+@media(max-width:860px){.join{grid-template-columns:1fr}}
+.formcard{background:#fff;border-radius:28px;padding:26px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.steps{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.steps span{background:#f6f2ff;color:var(--purple);border-radius:999px;padding:5px 12px;font-weight:800;font-size:13.5px}
+label.lb{display:block;font-weight:800;margin:14px 0 6px;font-size:16px}
+.field{width:100%;border:2px solid var(--line);border-radius:16px;padding:12px 14px;background:#fcfbff;outline:none;transition:border-color .15s}
+.field:focus{border-color:var(--purple);background:#fff}
+.starter{display:flex;align-items:center;gap:8px}
+.starter .pre{font-family:'Baloo Bhaijaan 2';font-weight:800;font-size:20px;color:var(--pink);white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font-weight:700;cursor:pointer;font-size:14.5px}
+.chip:hover,.chip.on{border-color:var(--pink);background:#fff0f7;color:var(--pink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:480px){.row2{grid-template-columns:1fr}}
+.flowers{display:flex;gap:8px;flex-wrap:wrap}
+.fl .bal{width:30px}
+.fl{width:50px;height:50px;border-radius:16px;border:2px solid var(--line);background:#fff;font-size:28px;cursor:pointer;display:grid;place-items:center}
+.fl.on{border-color:var(--pink);background:#fff0f7;transform:scale(1.06)}
+.classes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:480px){.classes{grid-template-columns:repeat(2,1fr)}}
+.cp{border:2px solid var(--line);background:#fff;border-radius:16px;padding:10px 6px;cursor:pointer;font-weight:800;font-size:15px;display:flex;flex-direction:column;align-items:center;gap:2px;transition:transform .12s}
+.cp .e{font-size:30px;line-height:1.1}
+.cp:hover{transform:translateY(-2px)}
+.cp.on{border-color:var(--cc);background:color-mix(in srgb,var(--cc) 12%,#fff);color:var(--cc);transform:scale(1.04)}
+.consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:14.5px;color:var(--muted)}
+.consent input{width:20px;height:20px;margin-top:3px;accent-color:var(--pink);flex:none}
+.err{color:#c62853;font-weight:700;min-height:24px;margin-top:8px;font-size:14.5px}
+.preview{position:sticky;top:90px}
+.preview .pv-t{font-weight:800;color:var(--muted);margin-bottom:10px;text-align:center}
+.bigflower{background:linear-gradient(180deg,#dff3ff,#fff);border-radius:28px;padding:22px;text-align:center;box-shadow:var(--shadow);border:3px dashed #b9dcf5}
+.bigflower .ph{font-family:'Baloo Bhaijaan 2';font-size:24px;font-weight:800;margin:6px 0 6px;color:var(--purple);word-break:break-word}
+.bigflower .who{color:var(--muted);font-weight:700}
+.bal{display:block;margin:0 auto}
+.bal svg{display:block;width:100%;height:auto;overflow:visible}
+.bal.big{width:120px;animation:bob 3s ease-in-out infinite}
+
+/* garden */
+.garden-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:18px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:800;box-shadow:var(--shadow)}
+.stat b{color:var(--pink);font-family:'Baloo Bhaijaan 2';font-size:20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.garden{position:relative;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.wish{position:relative;text-align:center;animation:pop .5s cubic-bezier(.3,1.6,.5,1) both}
+.wish .bal{width:86px;margin-bottom:-4px;animation:sway 4s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-8px) rotate(3deg)}}
+.wish .card{position:relative;background:#fff;border-radius:22px;padding:14px 14px 12px;box-shadow:var(--shadow);border-bottom:5px solid var(--c)}
+.wish .ph{font-family:'Baloo Bhaijaan 2';font-weight:800;font-size:19px;margin:0 0 8px;word-break:break-word}
+.wish .ph em{font-style:normal;color:var(--c)}
+.wish .meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:13.5px;font-weight:700;align-items:center}
+.wish .cls{background:#f6f2ff;color:var(--purple);border-radius:999px;padding:2px 10px;white-space:nowrap}
+.wish .del{position:absolute;top:10px;left:10px;border:0;background:#ffe9ee;color:#b4234a;border-radius:999px;width:28px;height:28px;cursor:pointer;font-weight:800}
+.empty{text-align:center;padding:40px 20px;background:#fff;border-radius:26px;border:2px dashed #d9d0f2;color:var(--muted);font-weight:700}
+.empty .em{font-size:54px}
+.more{display:flex;justify-content:center;margin-top:20px}
+.note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:14px}
+
+.sky{background:linear-gradient(180deg,#bfe6ff 0%,#e3f4ff 55%,#fdf7ff 100%);position:relative;overflow:hidden}
+.sky .cl{position:absolute;font-size:60px;opacity:.85;animation:drift 70s linear infinite;pointer-events:none}
+.sky .wrap{position:relative;z-index:1}
+.rise{position:absolute;bottom:-140px;width:56px;pointer-events:none;animation:rise linear infinite;opacity:.9;z-index:1}
+@keyframes rise{to{transform:translateY(-130vh) rotate(8deg)}}
+.hero .wrap{z-index:3}
+/* song */
+.song{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:start}
+@media(max-width:860px){.song{grid-template-columns:1fr}}
+.player{background:linear-gradient(150deg,#6a46d8,#ec4f9a);color:#fff;border-radius:28px;padding:24px;box-shadow:var(--shadow)}
+.player .top{display:flex;align-items:center;gap:16px}
+.playbtn{width:76px;height:76px;border-radius:50%;border:0;background:#fff;color:var(--pink);font-size:32px;cursor:pointer;flex:none;box-shadow:0 10px 24px -8px rgba(0,0,0,.35);transition:transform .15s}
+.playbtn:active{transform:scale(.92)}
+.player h3{font-size:24px}
+.player small{opacity:.9}
+.eq{display:flex;gap:4px;align-items:flex-end;height:34px;margin-inline-start:auto}
+.eq i{width:6px;border-radius:3px;background:rgba(255,255,255,.85);height:6px;transition:height .1s}
+.lyrics{margin-top:18px;background:rgba(255,255,255,.14);border-radius:20px;padding:16px 18px}
+.lyrics .stz{font-weight:800;opacity:.85;font-size:14px;margin-bottom:6px}
+.lyrics p{margin:4px 0;font-family:'Baloo Bhaijaan 2';font-size:21px;opacity:.6;transition:all .25s}
+.lyrics p.on{opacity:1;transform:scale(1.04);transform-origin:right;color:#fff6a8}
+.speed{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.speed button{border:0;border-radius:999px;padding:6px 14px;background:rgba(255,255,255,.2);color:#fff;font-weight:800;cursor:pointer}
+.speed button.on{background:#fff;color:var(--purple)}
+.hint2{margin-top:12px;font-weight:800;font-size:14px;background:rgba(255,255,255,.18);border-radius:999px;padding:6px 14px;display:inline-block}
+.playbtn:disabled{opacity:.6}
+.own{background:#fff;border-radius:26px;padding:22px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.own h3{font-size:21px;margin-bottom:4px}
+.own p{color:var(--muted);font-size:14.5px;margin:0 0 12px}
+.own .vid{width:100%;border-radius:18px;background:#000;display:block;aspect-ratio:16/9}
+.filebtn{display:inline-flex;align-items:center;gap:8px;background:#f3edff;color:var(--purple);border-radius:999px;padding:10px 18px;font-weight:800;cursor:pointer}
+.filebtn input{display:none}
+.lyrics-all{margin-top:14px;font-size:14.5px;color:var(--muted)}
+.lyrics-all b{color:var(--ink)}
+.musicfab{position:fixed;bottom:18px;left:18px;z-index:40;width:58px;height:58px;border-radius:50%;border:0;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;font-size:26px;cursor:pointer;box-shadow:0 12px 26px -10px rgba(91,60,196,.8)}
+.musicfab.on{animation:pulse 1.6s ease-in-out infinite}
+.musicfab.off{background:#b7b2cc}
+.fabtip{position:fixed;bottom:30px;left:84px;z-index:40;background:var(--ink);color:#fff;font-weight:800;font-size:13.5px;padding:7px 14px;border-radius:999px;box-shadow:var(--shadow);transition:opacity .4s}
+.fabtip.gone{opacity:0;pointer-events:none}
+@keyframes pulse{50%{transform:scale(1.1)}}
+/* footer */
+footer{background:linear-gradient(135deg,#5b3cc4,#ec4f9a);color:#fff;padding:40px 0 30px;margin-top:40px;text-align:center}
+footer h3{font-size:24px}
+footer p{margin:6px 0;opacity:.95}
+footer .sig{display:inline-block;margin-top:12px;background:rgba(255,255,255,.18);border-radius:999px;padding:8px 18px;font-weight:800}
+
+/* toast & confetti */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:999px;font-weight:800;z-index:60;transition:transform .35s;box-shadow:var(--shadow);max-width:90vw;text-align:center}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.conf{position:fixed;top:-20px;z-index:55;pointer-events:none;font-size:22px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <img class="hlogo" src="logo.png" alt="شعار مدرسة العريجاء الثانية لرياض الأطفال">
+      <div style="min-width:0">
+        <b>المدرسة الثانية بالعريجاء لرياض الأطفال</b>
+        <small>المعلمة: منال طلال العصيمي</small>
+      </div>
+    </div>
+    <nav class="links">
+      <a href="#rights">حقوقي</a>
+      <a href="#games">نلعب ونتعلم</a>
+      <a href="#song">نشيدنا</a>
+      <a href="#garden">سماؤنا</a>
+      <a href="#join" class="cta">أطلق بالونك 🎈</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="cloud" style="top:40px;animation-duration:46s" width="130" height="60" viewBox="0 0 130 60"><ellipse cx="40" cy="38" rx="34" ry="20" fill="#fff"/><ellipse cx="72" cy="28" rx="34" ry="26" fill="#fff"/><ellipse cx="100" cy="40" rx="26" ry="18" fill="#fff"/></svg>
+  <svg class="cloud" style="top:150px;animation-duration:62s;animation-delay:-25s" width="100" height="50" viewBox="0 0 130 60"><ellipse cx="40" cy="38" rx="34" ry="20" fill="#fff"/><ellipse cx="72" cy="28" rx="34" ry="26" fill="#fff"/><ellipse cx="100" cy="40" rx="26" ry="18" fill="#fff"/></svg>
+  <div id="heroBalloons" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <span class="pill">🎈 اليوم العالمي للطفل</span>
+    <h1><span class="c1">حقّي</span> في <span class="c2">الحياة</span>… <span class="c3">وأحلامي تحلّق</span></h1>
+    <p class="lead">أنا طفلٌ أستحقّ الحبّ والأمان والرعاية. تعال نكتشف حقوقنا، ونلعب، ونطلق بالوناتنا في سماء الروضة!</p>
+
+    <div class="datebox" aria-label="تاريخ اليوم العالمي للطفل">
+      <div class="cal"><span class="d">20</span><span class="m">نوفمبر</span></div>
+      <div class="info">
+        <b>اليوم العالمي للطفل</b>
+        <span id="dateFull">يوافق ٢٠ نوفمبر من كل عام</span>
+        <span class="countdown" id="countdown"></span>
+      </div>
+    </div>
+
+    <div class="kids" aria-hidden="true"><span>👧🏻</span><span>🧒🏻</span><span>🎈</span><span>👦🏻</span><span>👧🏻</span></div>
+    <div class="btns">
+      <a class="btn primary" href="#join">أطلق بالونك 🎈</a>
+      <a class="btn ghost" href="#rights">اكتشف حقوقك ←</a>
+    </div>
+  </div>
+  <svg class="hills" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,70 C240,10 420,110 720,60 C1000,15 1200,100 1440,50 L1440,120 L0,120 Z" fill="#b9e8a8"/>
+    <path d="M0,95 C300,50 520,120 820,85 C1100,55 1260,110 1440,85 L1440,120 L0,120 Z" fill="#8fd694"/>
+    
+  </svg>
+</section>
+
+<div class="credits">
+  <div class="wrap">
+    <div class="cred"><div class="ic" style="background:#fff0f7">🏫</div><div><small>المدرسة</small><b>المدرسة الثانية بالعريجاء لرياض الأطفال</b></div></div>
+    <div class="cred"><div class="ic" style="background:#f3edff">👩🏻‍🏫</div><div><small>إعداد المعلمة</small><b>منال طلال العصيمي</b></div></div>
+    <div class="cred"><div class="ic" style="background:#fff6e6">⭐</div><div><small>مديرة المدرسة</small><b>هيا البراكة</b></div></div>
+    <div class="cred"><div class="ic" style="background:#e8f8fa">📅</div><div><small>المناسبة</small><b>اليوم العالمي للطفل • ٢٠ نوفمبر</b></div></div>
+  </div>
+</div>
+
+<section class="sec" id="rights">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag" style="background:var(--purple)">⭐ نجوم حقوقنا</span>
+      <h2>كلّ حقٍّ نجمة تضيء سمائي</h2>
+      <p>اضغط على البطاقة لتكتشف حقّك، وستسمعه أيضاً 🔊</p>
+    </div>
+    <div class="rights" id="rightsGrid"></div>
+  </div>
+</section>
+
+<section class="sec" id="games" style="background:rgba(255,255,255,.55)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag" style="background:var(--teal)">🎲 نلعب ونتعلم</span>
+      <h2>هيّا نختبر معلوماتنا!</h2>
+      <p>ثلاث ألعاب قصيرة عن حقوقنا وكيف نحافظ على أنفسنا.</p>
+    </div>
+    <div class="games">
+      <div class="game">
+        <h3>✅ صح أم خطأ؟</h3>
+        <div class="hint">اقرأ الجملة واختر الإجابة.</div>
+        <div class="q" id="tfQ"></div>
+        <div class="opts">
+          <button class="opt" data-a="1" id="tfYes">صح ✔️</button>
+          <button class="opt" data-a="0" id="tfNo">خطأ ✖️</button>
+        </div>
+        <div class="fb" id="tfFb"></div>
+        <div class="prog"><span id="tfStep"></span><span class="score" id="tfScore"></span></div>
+      </div>
+
+      <div class="game">
+        <h3>🤔 اختر التصرّف الصحيح</h3>
+        <div class="hint">ماذا أفعل؟</div>
+        <div class="q" id="chQ"></div>
+        <div class="opts" id="chOpts"></div>
+        <div class="fb" id="chFb"></div>
+        <div class="prog"><span id="chStep"></span><span class="score" id="chScore"></span></div>
+      </div>
+
+      <div class="game">
+        <h3>🔗 اربط الصورة بالحق</h3>
+        <div class="hint">اضغط صورة ثم اضغط الحقّ المناسب لها.</div>
+        <div class="match">
+          <div class="col" id="mLeft"></div>
+          <div class="col" id="mRight"></div>
+        </div>
+        <div class="fb" id="mFb"></div>
+        <div class="prog"><span></span><button class="reset" id="mReset">العب من جديد ↻</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="song">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag" style="background:var(--blue)">🎵 نشيدنا</span>
+      <h2>نشيد «من حقّي أن ألعب»</h2>
+      <p>شغّلوا اللحن المرح وغنّوا مع الكلمات… السطر الذي يلمع هو دوركم!</p>
+    </div>
+    <div class="song">
+      <div class="player">
+        <div class="top">
+          <button class="playbtn" id="playBtn" aria-label="تشغيل النشيد" disabled>▶</button>
+          <div><h3>من حقّي أن ألعب 🎈</h3><small>لحن مرح للعب والغناء</small></div>
+          <div class="eq" id="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="hint2" id="audioHint">⏳ يتم تجهيز النشيد…</div>
+        <audio id="songAudio" loop preload="auto" playsinline></audio>
+        <div class="lyrics" id="lyrics"></div>
+        <div class="speed" id="voiceRow"><button type="button" id="voiceBtn" class="on">🎤 صوت المُنشد: يعمل</button></div>
+        <div class="speed" id="speed"><button type="button" data-b="96">🐢 هادئ</button><button type="button" data-b="116" class="on">🙂 عادي</button><button type="button" data-b="136">🐇 سريع</button></div>
+      </div>
+      <div class="own">
+        <h3>🎬 نشيد يوم الطفل</h3>
+        <p>شاهدوا النشيد واستمعوا إليه معاً 🎈</p>
+        <video id="ownAudio" class="vid" src="nasheed.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="join">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag" style="background:var(--pink)">🎈 حان دورك</span>
+      <h2>أكمل الجملة: «من حقّي أن…»</h2>
+      <p>اكتب حقّك، واسمك، وفصلك… وأطلق بالونك في سماء الروضة!</p>
+    </div>
+    <div class="join">
+      <form class="formcard" id="wishForm" novalidate>
+        <div class="steps"><span>١ اختر أو اكتب حقّك</span><span>٢ اسمك وفصلك</span><span>٣ اختر لون بالونك</span></div>
+
+        <label class="lb" for="phrase">حقّي</label>
+        <div class="starter">
+          <span class="pre">من حقّي أن</span>
+          <input class="field" id="phrase" maxlength="60" placeholder="ألعب، أتعلم، أعبّر…" autocomplete="off">
+        </div>
+        <div class="chips" id="chips"></div>
+
+        <label class="lb" for="kname">اسم الطفل / الطفلة</label>
+        <input class="field" id="kname" maxlength="30" placeholder="مثال: ريم" autocomplete="off">
+
+        <label class="lb">اختر فصلك</label>
+        <input type="hidden" id="kclass">
+        <div class="classes" id="classPick"></div>
+
+        <label class="lb">اختر لون بالونك</label>
+        <div class="flowers" id="flowers"></div>
+
+        <label class="consent"><input type="checkbox" id="consent"> <span>أوافق (وليّ الأمر/المعلمة) على نشر اسم الطفل ومشاركته في سماء الروضة.</span></label>
+        <div class="err" id="err" role="alert"></div>
+        <button class="btn primary" type="submit" id="sendBtn" style="width:100%;justify-content:center;margin-top:4px">أطلق بالوني 🎈</button>
+      </form>
+
+      <div class="preview">
+        <div class="pv-t">هكذا سيظهر بالونك 👇</div>
+        <div class="bigflower">
+          <div class="bal big" id="pvEm"></div>
+          <div class="ph" id="pvPh">من حقّي أن …</div>
+          <div class="who" id="pvWho">اسمك • فصلك</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky" id="garden">
+  <span class="cl" style="top:30px">☁️</span><span class="cl" style="top:220px;animation-delay:-30s;font-size:44px">☁️</span><span class="cl" style="top:420px;animation-delay:-50s">☁️</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag" style="background:var(--orange)">💫 من قلوب براعمنا</span>
+      <h2>سماء حقوقنا</h2>
+      <p>كل مشاركة بالون جديد… بمشاركتك تتلوّن سماؤنا 🎈</p>
+    </div>
+    <div class="garden-bar">
+      <div class="stat">🎈 عدد البالونات: <b id="count">٠</b></div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="garden" id="gardenGrid"></div>
+    <div class="more"><button class="btn ghost" id="moreBtn" hidden>عرض المزيد ↓</button></div>
+    <div class="note" id="modeNote"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap frow"><div class="flogo"><img src="logo.png" alt="شعار الروضة"></div><div class="ftx">
+    <h3>🎈 طفولتنا تحلّق بالحبّ… وأحلامنا تكبر بحقوقنا</h3>
+    <p>المدرسة الثانية بالعريجاء لرياض الأطفال</p>
+    <p>مديرة المدرسة: هيا البراكة</p>
+    <p>اليوم العالمي للطفل • ٢٠ نوفمبر</p>
+    <span class="sig">إعداد المعلمة: منال طلال العصيمي</span>
+  </div><div class="flogo"><img src="logo.png" alt="شعار الروضة"></div></div>
+</footer>
+
+<audio id="bgAudio" loop preload="auto" playsinline></audio>
+<div class="fabtip" id="fabTip">🎵 المسي الشاشة لتشغيل الموسيقى</div>
+<button class="musicfab" id="musicFab" type="button" aria-label="موسيقى الخلفية" title="موسيقى الخلفية">🎵</button>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const toAr=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+const toast=(m)=>{const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2600)};
+function speak(txt){try{if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(txt);u.lang='ar-SA';u.rate=.9;speechSynthesis.speak(u)}catch(e){}}
+function confetti(n=40){const em=['🎈','⭐','✨','🎉','💖','🌈','🎈'];for(let i=0;i<n;i++){const s=document.createElement('span');s.className='conf';s.textContent=em[i%em.length];s.style.left=Math.random()*100+'vw';s.style.animationDuration=(2.2+Math.random()*2)+'s';s.style.animationDelay=(Math.random()*.6)+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),5200)}}
+
+/* ---------- audio: rendered offline to WAV, played through <audio> (works on iPhone silent mode too) ---------- */
+let X=null,NB=null;
+const mf=m=>440*Math.pow(2,(m-69)/12);
+function note(dest,t,f,d,type,vol,f2){const o=X.createOscillator(),g=X.createGain();o.type=type;o.frequency.setValueAtTime(f,t);if(f2)o.frequency.exponentialRampToValueAtTime(f2,t+d);g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol,t+0.012);g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g);g.connect(dest);o.start(t);o.stop(t+d+0.02)}
+function noise(dest,t,d,vol,ftype,freq){if(!NB){NB=X.createBuffer(1,Math.floor(X.sampleRate*0.3),X.sampleRate);const a=NB.getChannelData(0);for(let i=0;i<a.length;i++)a[i]=Math.random()*2-1}
+  const s=X.createBufferSource();s.buffer=NB;const f=X.createBiquadFilter();f.type=ftype;f.frequency.value=freq;const g=X.createGain();g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(0.0001,t+d);s.connect(f);f.connect(g);g.connect(dest);s.start(t);s.stop(t+d+0.02)}
+function toWav(buf){const ch=buf.getChannelData(0),n=ch.length,sr=buf.sampleRate,ab=new ArrayBuffer(44+n*2),v=new DataView(ab);
+  const ws=(o,s)=>{for(let i=0;i<s.length;i++)v.setUint8(o+i,s.charCodeAt(i))};ws(0,'RIFF');v.setUint32(4,36+n*2,true);ws(8,'WAVE');ws(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,sr,true);v.setUint32(28,sr*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);ws(36,'data');v.setUint32(40,n*2,true);
+  let peak=0;for(let i=0;i<n;i++)peak=Math.max(peak,Math.abs(ch[i]));const k=peak>0?0.92/peak:1;
+  for(let i=0;i<n;i++){const x=Math.max(-1,Math.min(1,ch[i]*k));v.setInt16(44+i*2,x<0?x*0x8000:x*0x7fff,true)}
+  return URL.createObjectURL(new Blob([ab],{type:'audio/wav'}))}
+async function renderAudio(sec,fn){const OC=window.OfflineAudioContext||window.webkitOfflineAudioContext;if(!OC)return null;const sr=22050;
+  X=new OC(1,Math.ceil(sr*sec),sr);NB=null;const out=X.destination;fn(out);
+  const buf=await new Promise((res,rej)=>{const r=X.startRendering();if(r&&r.then)r.then(res,rej);else X.oncomplete=ev=>res(ev.renderedBuffer)});X=null;return toWav(buf)}
+
+/* sound effects */
+const SFX={};
+const SFXDEF={
+  ok:o=>{note(o,.01,mf(84),.14,'triangle',.5);note(o,.11,mf(88),.14,'triangle',.5);note(o,.21,mf(91),.3,'triangle',.5)},
+  no:o=>{note(o,.01,mf(55),.18,'square',.25);note(o,.17,mf(50),.3,'square',.25)},
+  flip:o=>{note(o,.01,500,.14,'sine',.5,1200)},
+  pop:o=>{noise(o,.01,.08,.7,'bandpass',2500);note(o,.06,300,.5,'sine',.5,1400);note(o,.36,mf(88),.3,'triangle',.4);note(o,.46,mf(91),.45,'triangle',.4)}};
+function sfx(k){const u=SFX[k];if(!u)return;try{const a=new Audio(u);a.volume=.8;const p=a.play();if(p&&p.catch)p.catch(()=>{})}catch(e){}}
+
+// original melody (8 bars, 4/4) — [midi, beats]
+const MEL=[[72,.5],[76,.5],[79,.5],[76,.5],[72,.5],[76,.5],[79,1],
+ [81,.5],[79,.5],[77,.5],[76,.5],[74,1],[67,1],
+ [77,.5],[81,.5],[84,.5],[81,.5],[79,.5],[76,.5],[72,1],
+ [74,.5],[76,.5],[77,.5],[74,.5],[72,2],
+ [76,1],[76,.5],[77,.5],[79,1],[79,1],
+ [81,.5],[79,.5],[77,.5],[76,.5],[77,1],[74,1],
+ [76,.5],[77,.5],[79,.5],[81,.5],[79,.5],[77,.5],[76,.5],[74,.5],
+ [72,1],[67,1],[72,2]];
+const ROOT=[48,43,41,48,48,41,43,48];
+const STANZAS=[
+ {t:'المقطع الأول',l:['أنا طفلٌ قلبي يضحكْ 😊','في بيتي آمنٌ ألعبْ ⚽','أسرتي تحميني وتحبُّني 💞','وبروضتي أقرأُ وأكتبْ 📚']},
+ {t:'اللازمة — غنّوا معاً!',l:['من حقّي أن ألعبْ 🎈','من حقّي أن أتعلّمْ ✏️','من حقّي أن أعيشَ بأمانْ 🏡','وبحبٍّ أكبرُ وأحلمْ ⭐']},
+ {t:'المقطع الثاني',l:['لي صوتٌ ورأيٌ مسموعْ 🗣️','وحقوقي نورٌ يلمعْ ✨','يومُ الطفلِ عيدٌ لنا 🎉','وبالوناتُ الفرحِ تُرفَعْ 🎈']},
+ {t:'اللازمة — غنّوا معاً!',l:['من حقّي أن ألعبْ 🎈','من حقّي أن أتعلّمْ ✏️','من حقّي أن أعيشَ بأمانْ 🏡','وبحبٍّ أكبرُ وأحلمْ ⭐']}];
+let BPM=116,playing=false,raf=0,curSt=-1,curLn=-1;
+const SONG={};
+const EV=[];(function(){let b=0;MEL.forEach(([m,d])=>{EV.push({b,k:'m',m,d});b+=d});for(let bar=0;bar<8;bar++){const r=ROOT[bar];[0,7,12,7].forEach((iv,i)=>EV.push({b:bar*4+i,k:'b',m:r+iv,d:.9}));for(let i=0;i<8;i++)EV.push({b:bar*4+i*.5,k:'h'});EV.push({b:bar*4,k:'k'},{b:bar*4+2,k:'k'},{b:bar*4+1,k:'c'},{b:bar*4+3,k:'c'})}})();
+function songFn(bpm){return out=>{const spb=60/bpm;
+  for(let lp=0;lp<4;lp++)EV.forEach(e=>{const t=0.05+(lp*32+e.b)*spb;
+    if(e.k==='m'){note(out,t,mf(e.m),e.d*spb*.95,'square',.12);note(out,t,mf(e.m+12),e.d*spb*.8,'sine',.1)}
+    else if(e.k==='b')note(out,t,mf(e.m),e.d*spb,'triangle',.4);
+    else if(e.k==='k')note(out,t,150,.22,'sine',.8,45);
+    else if(e.k==='h')noise(out,t,.04,.08,'highpass',7000);
+    else if(e.k==='c')noise(out,t,.12,.2,'bandpass',1600)})}}
+const songSec=bpm=>0.05+128*60/bpm+0.6;
+/* background music: gentle original music-box loop */
+const BG_MEL=[[76,1],[79,1],[84,1],[79,1],[81,1],[79,1],[76,2],[77,1],[81,1],[84,1],[81,1],[79,1],[76,1],[74,2],
+ [76,1],[79,1],[84,1],[88,1],[86,1],[84,1],[81,2],[77,1],[76,1],[74,1],[79,1],[72,4]];
+const BG_CH=[[60,64,67],[57,60,64],[53,57,60],[55,59,62],[60,64,67],[50,53,57],[55,59,62],[60,64,67]];
+const BG_BPM=96;
+function bgFn(out){const spb=60/BG_BPM;let b=0;
+  BG_MEL.forEach(([m,d])=>{const t=0.02+b*spb;note(out,t,mf(m),Math.min(d*spb*1.6,2.4),'sine',.32);note(out,t,mf(m+12),d*spb*.7,'sine',.07);b+=d});
+  BG_CH.forEach((c,bar)=>{const pat=[0,1,2,1,0,1,2,1];pat.forEach((k,i)=>note(out,0.02+(bar*4+i*.5)*spb,mf(c[k]),.5*spb*1.4,'triangle',.09));
+    note(out,0.02+bar*4*spb,mf(c[0]-12),2*spb,'sine',.28);note(out,0.02+(bar*4+2)*spb,mf(c[0]-12),2*spb,'sine',.22)})}
+const bg=$('#bgAudio');bg.volume=.4;
+let bgOn=true,bgReady=false,bgStarted=false;
+function otherPlaying(){const o=$('#ownAudio');return playing||(o&&!o.paused)}
+function bgSync(){const f=$('#musicFab');const on=bgOn&&!bg.paused;f.classList.toggle('on',on);f.classList.toggle('off',!bgOn);f.textContent=bgOn?'🎵':'🔇';f.setAttribute('aria-label',bgOn?'إيقاف موسيقى الخلفية':'تشغيل موسيقى الخلفية')}
+function bgPlay(){if(!bgReady||!bgOn||otherPlaying())return;const p=bg.play();if(p&&p.then)p.then(()=>{bgStarted=true;$('#fabTip').classList.add('gone');bgSync()}).catch(()=>{});}
+function bgPause(){try{bg.pause()}catch(e){}bgSync()}
+function bgResume(){if(bgOn&&!otherPlaying())bgPlay()}
+bg.addEventListener('play',bgSync);bg.addEventListener('pause',bgSync);
+$('#musicFab').onclick=()=>{bgOn=!bgOn;if(bgOn){bgPlay()}else{bgPause()}$('#fabTip').classList.add('gone');bgSync()};
+function firstTouch(e){if(bgStarted){['click','touchend','keydown'].forEach(k=>document.removeEventListener(k,firstTouch,true));return}
+  if(e&&e.target&&e.target.closest&&e.target.closest('#playBtn,#musicFab,#ownAudio'))return;bgPlay()}
+['click','touchend','keydown'].forEach(k=>document.addEventListener(k,firstTouch,true));
+(async()=>{try{bg.src=await renderAudio(0.02+32*60/BG_BPM,bgFn);bgReady=true;bgPlay()}catch(e){}})();
+
+const player=$('#songAudio');
+let audioReady=false;
+(async function prep(){try{
+  for(const k in SFXDEF)SFX[k]=await renderAudio(1,SFXDEF[k]);
+  SONG[116]=await renderAudio(songSec(116),songFn(116));
+  player.src=SONG[116];audioReady=true;$('#playBtn').disabled=false;$('#audioHint').textContent='🔊 جاهز! اضغطي زر التشغيل';
+  SONG[96]=await renderAudio(songSec(96),songFn(96));SONG[136]=await renderAudio(songSec(136),songFn(136));
+}catch(err){$('#audioHint').textContent='تعذّر تجهيز الصوت في هذا المتصفح'}})();
+
+function lyricTick(){if(!playing)return;const spb=60/BPM;const pos=(player.currentTime-0.05)/spb;if(pos>=0){const st=Math.floor(pos/32)%4,ln=Math.floor((pos%32)/8);
+  if(st!==curSt){curSt=st;curLn=-1;drawLyrics(st)}if(ln!==curLn){curLn=ln;if(voiceOn)sayLine(STANZAS[st].l[ln]);[...$('#lyrics').querySelectorAll('p')].forEach((p,i)=>p.classList.toggle('on',i===ln))}
+  const bars=[...$('#eq').children];bars.forEach((b,i)=>b.style.height=(6+Math.abs(Math.sin(pos*1.7+i*.9))*26)+'px')}
+  raf=requestAnimationFrame(lyricTick)}
+function drawLyrics(st){const s=STANZAS[st];const L=$('#lyrics');L.innerHTML='<div class="stz"></div>';L.firstChild.textContent='🎶 '+s.t;s.l.forEach(x=>{const p=document.createElement('p');p.textContent=x;L.appendChild(p)})}
+let voiceOn=true,TTS=null,arVoice=null;
+function pickVoice(){try{const v=speechSynthesis.getVoices();arVoice=v.find(x=>/^ar[-_]SA/i.test(x.lang))||v.find(x=>/^ar/i.test(x.lang))||null}catch(e){}}
+try{pickVoice();speechSynthesis.onvoiceschanged=pickVoice}catch(e){}
+(async()=>{try{if(window.claude&&window.claude.use)TTS=await window.claude.use('tts')}catch(e){}})();
+const plain=s=>s.replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}️]/gu,'').trim();
+function sayLine(s){const t=plain(s);if(!t)return;
+  if(TTS){TTS.speak(t,{language:'ar',rate:1.05}).catch(()=>{});return}
+  try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ar-SA';if(arVoice)u.voice=arVoice;u.rate=BPM>=130?1.05:BPM<=100?.85:.95;u.pitch=1.25;u.volume=1;speechSynthesis.speak(u)}catch(e){}}
+function voiceWarm(){try{if(!TTS){const u=new SpeechSynthesisUtterance(' ');u.volume=0;u.lang='ar-SA';speechSynthesis.speak(u)}}catch(e){}}
+function stopVoice(){try{TTS?TTS.stop():speechSynthesis.cancel()}catch(e){}}
+$('#voiceBtn').onclick=()=>{voiceOn=!voiceOn;$('#voiceBtn').classList.toggle('on',voiceOn);$('#voiceBtn').textContent='🎤 صوت المُنشد: '+(voiceOn?'يعمل':'متوقف');if(!voiceOn)stopVoice();else if(playing)voiceWarm();player.volume=voiceOn?.5:1};
+player.volume=.5;
+function startSong(){if(!audioReady){toast('⏳ لحظة… يتم تجهيز النشيد');return}
+  if(voiceOn)voiceWarm();bgPause();
+  try{$('#ownAudio').pause()}catch(e){}
+  const p=player.play();playing=true;curSt=-1;curLn=-1;syncBtns();cancelAnimationFrame(raf);lyricTick();
+  if(p&&p.catch)p.catch(()=>{playing=false;syncBtns();toast('اضغطي زر التشغيل مرة ثانية 🔊')})}
+function stopSong(){player.pause();stopVoice();setTimeout(bgResume,300);playing=false;cancelAnimationFrame(raf);[...$('#eq').children].forEach(b=>b.style.height='6px');$('#lyrics').querySelectorAll('p').forEach(p=>p.classList.remove('on'));syncBtns()}
+player.addEventListener('pause',()=>{if(playing){playing=false;cancelAnimationFrame(raf);stopVoice();syncBtns();setTimeout(bgResume,300)}});
+function toggleSong(){playing?stopSong():startSong()}
+function syncBtns(){$('#playBtn').textContent=playing?'⏸':'▶';$('#playBtn').setAttribute('aria-label',playing?'إيقاف النشيد':'تشغيل النشيد');}
+$('#playBtn').onclick=toggleSong;
+$('#speed').querySelectorAll('button').forEach(b=>b.onclick=()=>{const bpm=+b.dataset.b;if(!SONG[bpm]){toast('⏳ لحظة… يتم تجهيز السرعة');return}
+  $('#speed').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const was=playing;const frac=player.duration?player.currentTime/player.duration:0;
+  BPM=bpm;player.src=SONG[bpm];player.load();try{player.currentTime=0}catch(e){}if(was){const p=player.play();playing=true;if(p&&p.catch)p.catch(()=>{});lyricTick()}});
+drawLyrics(0);
+$('#ownAudio').addEventListener('play',()=>{if(playing)stopSong();bgPause()});
+$('#ownAudio').addEventListener('pause',()=>setTimeout(bgResume,300));
+$('#ownAudio').addEventListener('ended',()=>setTimeout(bgResume,300));
+
+/* ---------- date & countdown ---------- */
+(function(){
+  const now=new Date();const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  let y=today.getFullYear();let day=new Date(y,10,20);
+  if(today>day) {day=new Date(y+1,10,20)}
+  const diff=Math.round((day-today)/864e5);
+  let hijri='';
+  try{hijri=new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura',{day:'numeric',month:'long',year:'numeric'}).format(day)}catch(e){}
+  let wd='';try{wd=new Intl.DateTimeFormat('ar-SA',{weekday:'long'}).format(day)}catch(e){}
+  $('#dateFull').textContent=(wd?wd+' ':'')+toAr(20)+' نوفمبر '+toAr(day.getFullYear())+'م'+(hijri?' • '+hijri.replace('هـ','')+'هـ':'');
+  $('#countdown').textContent= diff===0 ? '🎉 اليوم هو يومكم يا أبطال! كل عام وأنتم بخير' : diff===1 ? '⏳ باقي يوم واحد على يوم الطفل!' : diff===2 ? '⏳ باقي يومان على يوم الطفل!' : '⏳ باقي '+toAr(diff)+(diff<=10?' أيام':' يوماً')+' على يوم الطفل';
+})();
+
+/* ---------- rights ---------- */
+const RIGHTS=[
+ {e:'🌱',t:'حقّ الحياة',s:'حياتي غالية',b:'لكلّ طفل الحق في أن يعيش بكرامة وأمان ورعاية.',c:'#2aa952'},
+ {e:'💞',t:'الحب والرعاية',s:'أسرتي تحبني',b:'أسرتي تحبني وتهتم بي، وأشعر معها بالطمأنينة.',c:'#ec4f9a'},
+ {e:'🩺',t:'الرعاية الصحية',s:'صحتي كنز',b:'أزور الطبيب عند الحاجة، وأخبر الكبار إذا تألمت.',c:'#14a6b8'},
+ {e:'🍎',t:'الغذاء والماء',s:'غذاء صحي',b:'آكل طعاماً مفيداً، وأشرب ماءً نظيفاً، وأنام جيداً.',c:'#f59a2c'},
+ {e:'🏡',t:'بيت آمن',s:'الأمان يسعد قلبي',b:'لي بيت آمن أعيش فيه مع من يرعاني.',c:'#7b4fd6'},
+ {e:'🦺',t:'السلامة',s:'أحافظ على نفسي',b:'أعبر الشارع مع شخص بالغ، وأتبع إشارات المرور.',c:'#e8613a'},
+ {e:'🆘',t:'طلب المساعدة',s:'تصرّف شجاع',b:'أطلب المساعدة عند الخطر، وأخبر شخصاً أثق به.',c:'#2f7fd1'},
+ {e:'⚽',t:'اللعب',s:'ألعب وأفرح',b:'من حقي أن ألعب وأستمتع وأرتاح.',c:'#22b07d'},
+ {e:'📚',t:'التعليم',s:'أتعلم وأكبر',b:'من حقي أن أتعلم في روضتي ومدرستي.',c:'#c0399c'},
+ {e:'🗣️',t:'التعبير',s:'صوتي مهم',b:'من حقي أن أعبّر عن رأيي ومشاعري بأدب.',c:'#5b6ee1'},
+ {e:'🪪',t:'الاسم والهوية',s:'أنا مميّز',b:'لي اسم جميل وهوية ووطن أفتخر به.',c:'#0e9488'},
+ {e:'🤝',t:'المساواة',s:'كلنا سواء',b:'كل الأطفال متساوون في الحقوق والاحترام.',c:'#d9822b'}
+];
+const rg=$('#rightsGrid');
+RIGHTS.forEach(r=>{
+  const b=document.createElement('button');b.className='right';b.type='button';b.style.setProperty('--c',r.c);
+  b.innerHTML='<div class="in"><div class="f"><div class="em"></div><h3></h3><small></small></div><div class="b"><div class="tx"></div><span class="say">🔊 استمع</span></div></div>';
+  b.querySelector('.f .em').textContent=r.e;b.querySelector('h3').textContent=r.t;b.querySelector('small').textContent=r.s;b.querySelector('.tx').textContent=r.b;
+  b.setAttribute('aria-label',r.t);
+  b.onclick=()=>{sfx('flip');b.classList.toggle('flip');if(b.classList.contains('flip'))speak(r.t+'. '+r.b)};
+  rg.appendChild(b);
+});
+
+/* ---------- game 1: true / false ---------- */
+const TF=[
+ ['أغسل يديّ قبل الأكل',1],['ألعب بالكهرباء',0],['أعبر الشارع مع شخص كبير',1],
+ ['أذهب مع شخص غريب لا أعرفه',0],['أخبر أمي إذا شعرت بالألم',1],['أقترب من النار',0],['أشرب الماء النظيف',1]
+];
+let tfI=0,tfS=0,tfLock=false;
+function tfShow(){if(tfI>=TF.length){$('#tfQ').textContent='🏆 أحسنت! أنهيت اللعبة';$('#tfFb').innerHTML='';$('#tfStep').innerHTML='<button class="reset" id="tfAgain">العب من جديد ↻</button>';$('#tfAgain').onclick=()=>{tfI=0;tfS=0;tfShow()};if(tfS>=TF.length-1)confetti(25);return}
+ $('#tfQ').textContent=TF[tfI][0];$('#tfFb').textContent='';$('#tfStep').textContent='السؤال '+toAr(tfI+1)+' من '+toAr(TF.length);$('#tfScore').textContent='⭐ '+toAr(tfS);
+ ['#tfYes','#tfNo'].forEach(id=>$(id).className='opt');tfLock=false}
+[$('#tfYes'),$('#tfNo')].forEach(btn=>btn.onclick=()=>{if(tfLock||tfI>=TF.length)return;tfLock=true;const ok=+btn.dataset.a===TF[tfI][1];btn.classList.add(ok?'ok':'no');
+ $('#tfFb').textContent=ok?'رائع! إجابة صحيحة 🌟':(TF[tfI][1]?'الإجابة: صح ✔️':'الإجابة: خطأ ✖️ — هذا خطر!');sfx(ok?'ok':'no');if(ok)tfS++;$('#tfScore').textContent='⭐ '+toAr(tfS);speak(ok?'أحسنت':'حاول مرة أخرى');setTimeout(()=>{tfI++;tfShow()},1300)});
+tfShow();
+
+/* ---------- game 2: choose action ---------- */
+const CH=[
+ {q:'إذا شعرتُ بالتعب، ماذا أفعل؟',o:[['🧑‍⚕️ أخبر أهلي وأزور الطبيب',1],['🤐 أخفي ذلك ولا أقول شيئاً',0]]},
+ {q:'إذا ضعتُ في السوق، ماذا أفعل؟',o:[['🏃 أخرج وحدي أبحث',0],['🙋 أطلب المساعدة من موظف أو رجل أمن',1]]},
+ {q:'وجدتُ أدوية على الطاولة، ماذا أفعل؟',o:[['💊 أتذوقها',0],['🗣️ أخبر شخصاً كبيراً',1]]},
+ {q:'صديقي يريد أن يلعب معنا، ماذا أفعل؟',o:[['🤝 أشاركه اللعب',1],['🙅 أرفضه',0]]},
+ {q:'أريد أن أعبر الشارع، ماذا أفعل؟',o:[['👩‍👧 أمسك يد شخص كبير',1],['🚸 أركض بسرعة وحدي',0]]}
+];
+let chI=0,chS=0,chLock=false;
+function chShow(){const box=$('#chOpts');box.innerHTML='';
+ if(chI>=CH.length){$('#chQ').textContent='🏅 بطل السلامة!';$('#chFb').textContent='';$('#chStep').innerHTML='<button class="reset" id="chAgain">العب من جديد ↻</button>';$('#chAgain').onclick=()=>{chI=0;chS=0;chShow()};if(chS===CH.length)confetti(25);return}
+ const c=CH[chI];$('#chQ').textContent=c.q;$('#chFb').textContent='';$('#chStep').textContent='الموقف '+toAr(chI+1)+' من '+toAr(CH.length);$('#chScore').textContent='⭐ '+toAr(chS);chLock=false;
+ c.o.forEach(([t,a])=>{const b=document.createElement('button');b.className='opt';b.type='button';b.textContent=t;b.style.fontSize='15px';
+  b.onclick=()=>{if(chLock)return;chLock=true;b.classList.add(a?'ok':'no');sfx(a?'ok':'no');if(a){chS++;$('#chFb').textContent='تصرّف صحيح! 👏';speak('تصرف صحيح')}else{$('#chFb').textContent='لا، هذا غير آمن 🙈';[...box.children].forEach((x,i)=>{if(c.o[i][1])x.classList.add('ok')})}
+   $('#chScore').textContent='⭐ '+toAr(chS);setTimeout(()=>{chI++;chShow()},1500)};box.appendChild(b)})}
+chShow();
+
+/* ---------- game 3: match ---------- */
+const M=[['👨‍👩‍👧','الرعاية'],['🩺','الصحة'],['🚸','الأمان'],['🌱','الحياة'],['⚽','اللعب']];
+let mSel=null,mDone=0;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function mBuild(){mSel=null;mDone=0;$('#mFb').textContent='';const L=$('#mLeft'),R=$('#mRight');L.innerHTML='';R.innerHTML='';
+ shuffle(M).forEach(([e,t])=>{const b=document.createElement('button');b.type='button';b.className='mi';b.innerHTML='<span class="e"></span>';b.firstChild.textContent=e;b.dataset.k=t;b.onclick=()=>{if(b.classList.contains('done'))return;L.querySelectorAll('.mi').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');mSel=b};L.appendChild(b)});
+ shuffle(M).forEach(([e,t])=>{const b=document.createElement('button');b.type='button';b.className='mi';b.textContent=t;b.dataset.k=t;
+  b.onclick=()=>{if(b.classList.contains('done'))return;if(!mSel){$('#mFb').textContent='اختر صورة أولاً 👈';return}
+   if(mSel.dataset.k===t){mSel.classList.remove('sel');mSel.classList.add('done');b.classList.add('done');b.textContent='✔️ '+t;mSel=null;mDone++;sfx('ok');speak(t);
+     $('#mFb').textContent=mDone===M.length?'🎉 ممتاز! ربطت كل الصور':'أحسنت! 🌟';if(mDone===M.length)confetti(30)}
+   else{sfx('no');b.classList.add('shake');setTimeout(()=>b.classList.remove('shake'),400);$('#mFb').textContent='حاول مرة أخرى 💪'}};R.appendChild(b)})}
+$('#mReset').onclick=mBuild;mBuild();
+
+/* ---------- participate form ---------- */
+const STARTERS=['ألعب','أتعلم','أعبّر عن رأيي','أعيش بأمان','أحصل على الرعاية','أحافظ على صحتي','يحبني أهلي','أحلم','أرسم وأبدع','أُحترم'];
+const BCOL=['#ec4f9a','#f2b01e','#2f7fd1','#22b07d','#7b4fd6','#e8463a','#14a6b8','#f59a2c'];
+const OLD={'🌷':'#ec4f9a','🌸':'#e86fae','🌼':'#f2b01e','🌻':'#f59a2c','🌺':'#e8463a','🪷':'#c0399c','🌹':'#d42a4c','💐':'#7b4fd6'};
+const colOf=f=>/^#[0-9a-f]{6}$/i.test(f||'')?f:(OLD[f]||'#ec4f9a');
+const escT=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function balloonSVG(col,em){col=colOf(col);return '<svg viewBox="0 0 80 118" aria-hidden="true"><path d="M40 3C19 3 5 20 5 40c0 23 20 40 32 42l-4 6h14l-4-6c12-2 32-19 32-42C75 20 61 3 40 3z" fill="'+col+'"/><ellipse cx="26" cy="24" rx="7" ry="12" fill="#fff" opacity=".38" transform="rotate(-24 26 24)"/><path d="M40 88c-6 8 6 14 0 22" stroke="#8f89ad" stroke-width="1.6" fill="none"/>'+(em?'<text x="40" y="50" text-anchor="middle" font-size="26">'+escT(em)+'</text>':'')+'</svg>'}
+let flower=BCOL[0];
+const chipsEl=$('#chips');
+STARTERS.forEach(s=>{const c=document.createElement('button');c.type='button';c.className='chip';c.textContent=s;c.onclick=()=>{$('#phrase').value=s;chipsEl.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===c));pv()};chipsEl.appendChild(c)});
+const flEl=$('#flowers');
+BCOL.forEach(f=>{const b=document.createElement('button');b.type='button';b.className='fl'+(f===flower?' on':'');b.innerHTML='<span class="bal">'+balloonSVG(f,'')+'</span>';b.setAttribute('aria-label','لون البالون');b.onclick=()=>{flower=f;flEl.querySelectorAll('.fl').forEach(x=>x.classList.toggle('on',x===b));pv()};flEl.appendChild(b)});
+const clean=s=>String(s||'').replace(/\s+/g,' ').trim();
+function normPhrase(p){p=clean(p).replace(/^من\s*حق[ّ]?ي\s*(أن|ان)?\s*/,'');return p}
+function pv(){const p=normPhrase($('#phrase').value);const n=clean($('#kname').value),c=clean($('#kclass').value);
+ $('#pvEm').innerHTML=balloonSVG(flower,c?CLS_EM[c]:'');$('#pvPh').textContent='من حقّي أن '+(p||'…');$('#pvWho').textContent=(n||'اسمك')+' • '+(c?clsLabel(c):'فصلك')}
+['#phrase','#kname'].forEach(id=>$(id).addEventListener('input',pv));
+const CLASSES=[['المرح','🎉','#ec4f9a'],['النجوم','⭐','#e0a100'],['العصافير','🐦','#2f7fd1'],['النحلات','🐝','#f59a2c'],['المفكرون','💡','#7b4fd6'],['الغيوم','☁️','#14a6b8']];
+const CLS_EM=Object.fromEntries(CLASSES.map(c=>[c[0],c[1]]));
+const cpEl=$('#classPick');
+CLASSES.forEach(([n,e,col])=>{const b=document.createElement('button');b.type='button';b.className='cp';b.style.setProperty('--cc',col);b.innerHTML='<span class="e"></span><span></span>';b.firstChild.textContent=e;b.lastChild.textContent=n;
+  b.onclick=()=>{$('#kclass').value=n;cpEl.querySelectorAll('.cp').forEach(x=>x.classList.toggle('on',x===b));pv()};cpEl.appendChild(b)});
+const clsLabel=c=>(CLS_EM[c]?CLS_EM[c]+' ':'')+'فصل '+c;
+pv();
+
+/* ---------- storage: shared db with local fallback ---------- */
+const LKEY='childday_wishes_v1',MINE='childday_mine_v1';
+let db=null,wishes=[],shown=24,filter='الكل',mine=new Set();
+try{mine=new Set(JSON.parse(localStorage.getItem(MINE)||'[]'))}catch(e){}
+function saveMine(){try{localStorage.setItem(MINE,JSON.stringify([...mine]))}catch(e){}}
+function loadLocal(){try{return JSON.parse(localStorage.getItem(LKEY)||'[]')}catch(e){return[]}}
+function saveLocal(a){try{localStorage.setItem(LKEY,JSON.stringify(a))}catch(e){}}
+function setMode(shared){$('#modeNote').textContent=shared?'🌍 السماء مشتركة: تظهر البالونات لكل من يفتح الصفحة.':'💻 تُحفظ البالونات على هذا الجهاز.'}
+function valid(w){return w&&typeof w.p==='string'&&typeof w.n==='string'}
+
+function render(){
+  const F=$('#filters');F.innerHTML='';
+  ['الكل',...CLASSES.map(c=>c[0])].forEach(c=>{const b=document.createElement('button');b.type='button';b.className='chip'+(c===filter?' on':'');
+    const k=c==='الكل'?wishes.length:wishes.filter(w=>clean(w.c)===c).length;
+    b.textContent=(c==='الكل'?'🌈 الكل':CLS_EM[c]+' '+c)+' ('+toAr(k)+')';b.onclick=()=>{filter=c;shown=24;render()};F.appendChild(b)});
+  const list=wishes.filter(w=>filter==='الكل'||clean(w.c)===filter);
+  $('#count').textContent=toAr(list.length);
+  const G=$('#gardenGrid');G.innerHTML='';
+  if(!list.length){G.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="em">☁️</div>السماء تنتظر أول بالون… كن أنت الأول!</div>';$('#moreBtn').hidden=true;return}
+  list.slice(0,shown).forEach(w=>{
+    const d=document.createElement('div');d.className='wish';d.style.setProperty('--c',colOf(w.f));
+    d.innerHTML='<span class="bal" style="animation-delay:-'+(Math.random()*4).toFixed(2)+'s">'+balloonSVG(w.f,CLS_EM[clean(w.c)]||'')+'</span><div class="card"><div class="ph">من حقّي أن <em></em></div><div class="meta"><span class="nm"></span><span class="cls"></span></div></div>';
+        d.querySelector('em').textContent=w.p;d.querySelector('.nm').textContent='🧒 '+w.n;
+    const cl=d.querySelector('.cls');if(w.c)cl.textContent=clsLabel(w.c);else cl.remove();
+    if(mine.has(w.id)){const x=document.createElement('button');x.className='del';x.type='button';x.title='حذف';x.textContent='×';x.onclick=()=>removeWish(w.id);d.querySelector('.card').appendChild(x)}
+    G.appendChild(d)});
+  $('#moreBtn').hidden=list.length<=shown;
+}
+$('#moreBtn').onclick=()=>{shown+=24;render()};
+
+async function addWish(w){
+  if(db){await db.collection('wishes').doc(w.id).set(w)}
+  else{wishes=[w,...wishes];saveLocal(wishes);render()}
+  mine.add(w.id);saveMine();
+}
+async function removeWish(id){
+  try{
+    if(db){await db.collection('wishes').doc(id).delete()}
+    else{wishes=wishes.filter(w=>w.id!==id);saveLocal(wishes);render()}
+    mine.delete(id);saveMine();toast('تم حذف البالون');
+  }catch(e){toast('تعذّر الحذف')}
+}
+
+$('#wishForm').addEventListener('submit',async e=>{
+  e.preventDefault();const err=$('#err');err.textContent='';
+  const p=normPhrase($('#phrase').value),n=clean($('#kname').value),c=clean($('#kclass').value);
+  if(!p){err.textContent='اكتب حقّك أو اختر واحداً من الاقتراحات 🌼';$('#phrase').focus();return}
+  if(!n){err.textContent='اكتب اسم الطفل 😊';$('#kname').focus();return}
+  if(!c){err.textContent='اختر فصلك 🏫';return}
+  if(!$('#consent').checked){err.textContent='فضلاً ضع علامة الموافقة على النشر ✅';return}
+  const w={id:Date.now().toString(36)+Math.random().toString(36).slice(2,7),p:p.slice(0,60),n:n.slice(0,30),c:c.slice(0,25),f:flower,t:Date.now()};
+  const btn=$('#sendBtn');btn.disabled=true;
+  sfx('pop');
+  try{await addWish(w);confetti();speak('من حقي أن '+w.p+'. أحسنت يا '+w.n);toast('🎈 انطلق بالونك يا '+w.n+'!');
+    $('#phrase').value='';$('#kname').value='';$('#kclass').value='';cpEl.querySelectorAll('.cp').forEach(x=>x.classList.remove('on'));$('#consent').checked=false;chipsEl.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));pv();
+    filter='الكل';setTimeout(()=>document.getElementById('garden').scrollIntoView({behavior:'smooth'}),500)}
+  catch(ex){err.textContent='تعذّر الحفظ الآن، حاول مرة أخرى.'}
+  finally{btn.disabled=false}
+});
+
+/* init */
+wishes=loadLocal().filter(valid);render();setMode(false);
+(async()=>{
+  if(!window.claude||typeof window.claude.use!=='function')return;
+  let ns=null;try{ns=await window.claude.use('db')}catch(e){}
+  if(!ns)return;
+  let got=false;const timer=setTimeout(()=>{if(!got){db=null;setMode(false)}},10000);
+  try{
+    ns.collection('wishes').orderBy('t','desc').limit(500).onSnapshot(snap=>{
+      got=true;clearTimeout(timer);db=ns;setMode(true);
+      const docs=(snap&&snap.docs)||[];
+      wishes=docs.map(d=>{const v=typeof d.data==='function'?d.data():(d.data||d);return Object.assign({},v,{id:d.id||v.id})}).filter(valid);
+      render();
+    },()=>{clearTimeout(timer);db=null;setMode(false)});
+  }catch(e){clearTimeout(timer)}
+})();
+/* hero rising balloons */
+(function(){const H=$('#heroBalloons');const cols=['#ec4f9a','#f2b01e','#2f7fd1','#22b07d','#7b4fd6','#14a6b8'];for(let i=0;i<7;i++){const s=document.createElement('span');s.className='rise bal';s.style.left=(4+i*14+Math.random()*5)+'%';s.style.width=(38+Math.random()*26)+'px';s.style.animationDuration=(14+Math.random()*10)+'s';s.style.animationDelay=(-Math.random()*20)+'s';s.innerHTML=balloonSVG(cols[i%cols.length],'');H.appendChild(s)}})();
+
+})();
+</script>
+</body>
+</html>
